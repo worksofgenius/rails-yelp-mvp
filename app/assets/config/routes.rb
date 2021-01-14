@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  # resources :restaurants do
-  #  resources :reviews, only: [:new, :create]
-  # end
+  resources :restaurants, only: [:index, :show] do
+    resources :reviews, only: [:create]
+  end
+
+  resources :reviews, only: [:create]
 end
