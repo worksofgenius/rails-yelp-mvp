@@ -1,13 +1,15 @@
-<div class="container">
-  <h1><%= @restaurant.name %></h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/704982/pexels-photo-704982.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);">
+  <div class="container">
+    <h1><%= @restaurant.name %></h1>
+    <p><%= @restaurant.category %></p>
+  </div>
+</div>
 
-  <ul>
-    <li>
+<div class="box box-1">
       <%= @restaurant.phone_number %>
       <%= @restaurant.address %>
       <%= @restaurant.category %>
-    </li>
-    </ul>
+</div>
 
     <h2>Reviews</h2>
     <%= link_to "Add a review", new_restaurant_review_path(@restaurant) %>

@@ -1,11 +1,14 @@
-<div class="container">
-  <h1>Restaurants</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/704982/pexels-photo-704982.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);">
+  <div class="container">
+    <h1>Top Five Restaurants</h1>
+    <p>Make <i>tasteful</i> choices.</p>
+  </div>
+</div>
 
-  <ul>
-    <% @restaurants.each do |restaurant| %>
-      <li>
+<div class="container">
+  <% @restaurants.each do |restaurant| %>
+    <ul class="list-inline tabs-underlined">
         <%= link_to restaurant.name, restaurant_path(restaurant) %>
-      </li>
-    <% end %>
-  </ul>
+      <% end %>
+    </ul>
 </div>
